@@ -1,0 +1,17 @@
+# ── OS / editor junk ──────────────────────────────────────────────
+.DS_Store
+._*
+Thumbs.db
+
+# ── Large external dataset (hosted externally, not tracked) ───────
+# SpectroSense measured spectra (~6.2 GB). Download separately and place
+# under data/28176839/. See README.
+data/28176839/
+
+# ── Manuscript & response letter (not part of the code release) ──
+doc/
+
+# ── Generated outputs (regenerate with run_all_photosim / plotting) ──
+# Metric + reference databases and rendered figures.
+results/
+figs/
