@@ -90,7 +90,7 @@ colormap(cmap);
 c.Label.String = 'Frequency';
 c.LineWidth = 1;
 
-caxis([0,80]);
+caxis([0,60]);
 xticks([1,33,66,99]);yticks([1,50,100]);
 xticklabels([0.6,0.7,0.8,0.9]);yticklabels([0,0.05,0.1]);
 xlim([0,100]);ylim([0,100]);
@@ -136,7 +136,7 @@ colormap(cmap);
 c.Label.String = 'Frequency';
 c.LineWidth = 0.5;
 
-caxis([0,80]);
+caxis([0,60]);
 xticks([1,33,66,99]);yticks([1,40,80]);
 xticklabels([0.6,0.7,0.8,0.9]);yticklabels([0,0.1,0.2]);
 xlim([0,100]);ylim([0,100]);
@@ -182,7 +182,7 @@ colormap(cmap);
 c.Label.String = 'Frequency';
 c.LineWidth = 2;
 
-caxis([0,80]);
+caxis([0,60]);
 xticks([1,40,80]);yticks([1,50,100]);
 xticklabels([0,0.1,0.2]);yticklabels([0,0.05,0.1]);
 xlim([0,100]);ylim([0,100]);
@@ -243,7 +243,7 @@ colormap(cmap);
 c.Label.String = 'Frequency';
 c.LineWidth = 0.5;
 
-caxis([0,55]);
+caxis([0,60]);
 xticks([1,33,66,99]);yticks([1,50,100]);
 xticklabels([0.6,0.7,0.8,0.9]);yticklabels([0,0.05,0.1]);
 xlim([0,100]);ylim([0,100]);
@@ -288,9 +288,9 @@ hold on;
 set(gca,'YDir','normal');
 colormap(cmap);
 %c = colorbar();
-c.Label.String = 'Frequency';c.LineWidth = 0.5;caxis([0,55]);
+c.Label.String = 'Frequency';c.LineWidth = 0.5;caxis([0,60]);
 
-caxis([0,55]);
+caxis([0,60]);
 xticks([1,33,66,99]);yticks([1,40,80]);
 xticklabels([0.6,0.7,0.8,0.9]);yticklabels([0,0.1,0.2]);
 xlim([0,100]);ylim([0,100]);
@@ -335,7 +335,7 @@ set(gca,'YDir','normal');
 colormap(cmap);
 %c = colorbar();
 c.Label.String = 'Frequency';c.LineWidth = 2;
-caxis([0,55]);
+caxis([0,60]);
 
 xticks([1,40,80]);yticks([1,50,100]);
 xticklabels([0,0.1,0.2]);yticklabels([0,0.05,0.1]);
