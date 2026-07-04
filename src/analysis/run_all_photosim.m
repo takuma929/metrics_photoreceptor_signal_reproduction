@@ -64,8 +64,8 @@ for d = 1:numel(datasets)
             run_metrics;
 
             if exist('metricsFile', 'var') && exist(metricsFile, 'file') == 2
-                % plot_metrics_summary consumes metricsFile directly.
-                plot_metrics_summary;
+                % Metrics written successfully. Figures are drawn separately
+                % by the plot_figure* scripts (via main.m).
             else
                 warning('run_all_photosim:MissingMetrics', ...
                     'Metrics file for %s @ %s not found; skipping plot.', ...
