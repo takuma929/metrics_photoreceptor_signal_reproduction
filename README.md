@@ -76,17 +76,19 @@ scripts run from any working directory.
 
 ## External data
 
-The real‑world **SpectroSense** spectra (`data/28176839/`, ~6 GB) used for the
-robustness check are not bundled. Download them separately and place them under
-`data/28176839/SpectroSense Dataset`. Source: Lazar et al., *Regulation of pupil
-size in natural vision across the human lifespan*, R. Soc. Open Sci. **11**(6),
-191613 (2024).
+The real‑world **SpectroSense** spectra used for the robustness check are not
+bundled (>25 GB). Download them from figshare
+(https://doi.org/10.6084/m9.figshare.28176839); the download is a folder named
+`28176839`. Place that folder as‑is directly under `data/`, so the spectra end
+up at `data/28176839/SpectroSense Dataset`. Source: Lazar et al., *Regulation of
+pupil size in natural vision across the human lifespan*, R. Soc. Open Sci.
+**11**(6), 191613 (2024).
 
 ## Citing
 
 If you use this toolbox, please cite the paper. The preprint is:
 
-> A. C. Hexley, T. Morimoto, H. E. Smithson, and M. Spitschan, "Beyond colour
+> A. C. Schneider, T. Morimoto, H. E. Smithson, and M. Spitschan, "Beyond colour
 > gamuts: Novel metrics for the reproduction of photoreceptor signals," bioRxiv
 > (2021). https://doi.org/10.1101/2021.02.27.433203
 
