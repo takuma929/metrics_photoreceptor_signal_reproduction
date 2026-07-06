@@ -16,10 +16,52 @@ It implements the two metrics and the visualization introduced in the paper:
 
 ## Requirements
 
-- MATLAB (developed and tested with R2025b).
-- [Psychtoolbox](http://psychtoolbox.org/) on the MATLAB path — provides
-  `SplineSpd`, `GenerateCIEDay`, `GetCIES026`, and related colour utilities.
+- MATLAB (developed and tested with R2025b). No MathWorks add‑on toolboxes
+  beyond base MATLAB are required.
 - `data/data.mat` — the single consolidated data store, bundled with the repo.
+
+No external toolbox installation is needed. The handful of
+[Psychtoolbox](http://psychtoolbox.org/) colour utilities the code relies on
+(`SplineSpd`, `GenerateCIEDay`, and their dependencies) are bundled, verbatim
+and with attribution, under [`src/functions/psychtoolbox/`](src/functions/psychtoolbox/)
+— see its [`NOTICE.md`](src/functions/psychtoolbox/NOTICE.md). If you happen to
+have Psychtoolbox on your path as well, the bundled copies are identical, so
+either resolves.
+
+## Reproducibility / computing environment
+
+The results and figures were produced and verified on the following environment:
+
+| Component | Version |
+|---|---|
+| Operating system | macOS 26.5.1 (build 25F80) |
+| MATLAB | R2025b |
+| Bundled Psychtoolbox utilities | 3.0.18 (vendored, see below) |
+
+`main` adds `src/` (recursively) to the path, which includes the bundled
+Psychtoolbox colour utilities under
+[`src/functions/psychtoolbox/`](src/functions/psychtoolbox/); no separate
+Psychtoolbox install is required. No MathWorks add‑on toolboxes beyond base
+MATLAB are needed.
+
+Notes for reproducing the results (e.g. for a [CODECHECK](https://codecheck.org.uk/)):
+
+- **What to run.** From the repository root, run `main` (see *Quick start*). This
+  rebuilds the metrics from the bundled `data/data.mat` and redraws every paper
+  figure into `figs/`. The regenerated files are listed as the *manifest* in
+  [`codecheck.yml`](codecheck.yml).
+- **Runtime.** The default `main` run (metrics for the main reference set at all
+  four bit depths + all figures) completes in the order of minutes on a modern
+  laptop. The optional supporting analyses, `main(true, true)`, are noticeably
+  slower and are only needed to regenerate the Table values.
+- **`data/data.mat` is an input, not an output.** It is bundled and should not
+  be regenerated; the data‑preparation scripts that overwrite it
+  (`build_data_mat`, `build_main_illuminants`, `run_asano_cie2006`) are *not*
+  called by `main` and should not be run for a reproduction.
+- **The external SpectroSense dataset is not required.** The ~25 GB figshare
+  download (see *External data* below) is used only for a supplementary
+  robustness check and is not needed to reproduce the main results or any of the
+  manifest figures.
 
 ## Quick start
 

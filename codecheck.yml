@@ -1,0 +1,70 @@
+%YAML 1.1
+---
+# CODECHECK configuration file
+# Specification: https://codecheck.org.uk/spec/config/1.0/
+#
+# Requirements: MATLAB only (developed and tested with R2025b). No external
+# toolboxes are needed — the few Psychtoolbox colour utilities the code uses
+# are bundled under src/functions/psychtoolbox/ (see README and that folder's
+# NOTICE.md). Run `main` from the repository root to regenerate the manifest.
+version: https://codecheck.org.uk/spec/config/1.0/
+
+# ----------------------------------------------------------------------------
+# Manifest: the output files the workflow (`main`) regenerates into figs/.
+# Running `main` from the repository root rebuilds every file listed below.
+# One representative file is listed per paper figure / panel group; each
+# figure produces several sibling panels in the same figs/ directory.
+# ----------------------------------------------------------------------------
+manifest:
+  - file: figs/fig1a.pdf
+    comment: "Fig 1 - spectral sensitivities & example signals (panels fig1a-fig1h)"
+  - file: figs/fig2a.pdf
+    comment: "Fig 2 - equal-luminance MacLeod-Boynton locus (panels fig2a-fig2c + inserts)"
+  - file: figs/fig3a.pdf
+    comment: "Fig 3 - display primaries (panels fig3a-fig3h)"
+  - file: figs/fig4a.png
+    comment: "Fig 4a - chromaticity reproduction diagram"
+  - file: figs/fig4b.pdf
+    comment: "Fig 4b - chromaticity reproduction bar graph"
+  - file: figs/fig4c.pdf
+    comment: "Fig 4c - PSRM (photoreceptor signal reproduction) bar graph"
+  - file: figs/fig5ai.pdf
+    comment: "Fig 5 - PSDM rod & melanopsin distortion (panels fig5ai-fig5cii)"
+  - file: figs/fig6a_box_CRT.pdf
+    comment: "Fig 6 - PSDM per-display box/xy plots (CRT, LCD, DP variants)"
+  - file: figs/fig7_LvsS_all.pdf
+    comment: "Fig 7 - equal-luminance excitation diagrams, full database + 3-primary displays (fig7_{LvsS,LvsI,IvsS}_{all,crt,lcd,dp})"
+  - file: figs/fig8_LvsS_MPHDR.pdf
+    comment: "Fig 8 - equal-luminance excitation diagrams, 5-primary displays (fig8_{LvsS,LvsI,IvsS}_{MPHDR,Man,nb5p,bb5p,NZ})"
+  - file: figs/fig9a.pdf
+    comment: "Fig 9 - bit depth & tolerance analysis (fig9a, fig9b)"
+
+paper:
+  title: "Beyond colour gamuts: Novel metrics for the reproduction of photoreceptor signals"
+  authors:
+    - name: A. C. Schneider
+      ORCID: 0000-0002-0173-540X
+    - name: T. Morimoto
+      ORCID: 0000-0001-9897-8338
+    - name: H. E. Smithson
+      ORCID: 0000-0001-8904-8315
+    - name: M. Spitschan
+      ORCID: 0000-0002-8572-9268
+  reference: https://doi.org/10.1101/2021.02.27.433203
+
+# Source of the material being checked
+source: https://github.com/takuma929/metrics_photoreceptor_signal_reproduction
+
+repository:
+  - https://github.com/takuma929/metrics_photoreceptor_signal_reproduction
+
+# ----------------------------------------------------------------------------
+# The fields below are completed by the codechecker during/after the check.
+# ----------------------------------------------------------------------------
+# codechecker:
+#   - name:
+#     ORCID:
+# report:
+# check_time:
+# certificate:
+# summary:
