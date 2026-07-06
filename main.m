@@ -13,9 +13,11 @@ function main(REBUILD_METRICS, REBUILD_SUPPORTING)
 %     (3) redraw every figure in the paper into  figs/.
 %
 %   Requirements
-%     - MATLAB (developed with R2025b)
-%     - Psychtoolbox on the path (provides SplineSpd / GenerateCIEDay etc.)
+%     - MATLAB (developed with R2025b); no MathWorks add-on toolboxes needed
 %     - data/data.mat  (bundled; the single consolidated data store)
+%     The few Psychtoolbox colour utilities used (SplineSpd / GenerateCIEDay
+%     and their dependencies) are bundled under src/functions/psychtoolbox/,
+%     so no separate Psychtoolbox install is required. See its NOTICE.md.
 %
 %   Notes
 %     Each analysis/plotting script clears the base workspace and re-derives
